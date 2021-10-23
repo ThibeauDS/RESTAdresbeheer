@@ -1,0 +1,12 @@
+C:\Users\thibe\source\repos\RESTAdresbeheer\Domeinlaag\obj\Debug\net5.0\Domeinlaag.csproj.AssemblyReference.cache
+C:\Users\thibe\source\repos\RESTAdresbeheer\Domeinlaag\obj\Debug\net5.0\Domeinlaag.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\thibe\source\repos\RESTAdresbeheer\Domeinlaag\obj\Debug\net5.0\Domeinlaag.AssemblyInfoInputs.cache
+C:\Users\thibe\source\repos\RESTAdresbeheer\Domeinlaag\obj\Debug\net5.0\Domeinlaag.AssemblyInfo.cs
+C:\Users\thibe\source\repos\RESTAdresbeheer\Domeinlaag\obj\Debug\net5.0\Domeinlaag.csproj.CoreCompileInputs.cache
+C:\Users\thibe\source\repos\RESTAdresbeheer\Domeinlaag\bin\Debug\net5.0\Domeinlaag.deps.json
+C:\Users\thibe\source\repos\RESTAdresbeheer\Domeinlaag\bin\Debug\net5.0\Domeinlaag.dll
+C:\Users\thibe\source\repos\RESTAdresbeheer\Domeinlaag\bin\Debug\net5.0\ref\Domeinlaag.dll
+C:\Users\thibe\source\repos\RESTAdresbeheer\Domeinlaag\bin\Debug\net5.0\Domeinlaag.pdb
+C:\Users\thibe\source\repos\RESTAdresbeheer\Domeinlaag\obj\Debug\net5.0\Domeinlaag.dll
+C:\Users\thibe\source\repos\RESTAdresbeheer\Domeinlaag\obj\Debug\net5.0\ref\Domeinlaag.dll
+C:\Users\thibe\source\repos\RESTAdresbeheer\Domeinlaag\obj\Debug\net5.0\Domeinlaag.pdb
