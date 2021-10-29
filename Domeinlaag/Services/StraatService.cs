@@ -15,6 +15,13 @@ namespace Domeinlaag.Services
         private IStraatRepository _repo;
         #endregion
 
+        #region Constructors
+        public StraatService(IStraatRepository repo)
+        {
+            _repo = repo;
+        }
+        #endregion
+
         #region Methods
         public List<Straat> GeefStratenGemeente(int nIScode)
         {

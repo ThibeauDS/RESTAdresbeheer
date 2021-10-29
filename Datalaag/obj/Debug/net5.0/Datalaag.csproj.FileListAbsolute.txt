@@ -1,0 +1,15 @@
+C:\Users\thibe\Documents\GitHub\RESTAdresbeheer\Datalaag\bin\Debug\net5.0\Datalaag.deps.json
+C:\Users\thibe\Documents\GitHub\RESTAdresbeheer\Datalaag\bin\Debug\net5.0\Datalaag.dll
+C:\Users\thibe\Documents\GitHub\RESTAdresbeheer\Datalaag\bin\Debug\net5.0\ref\Datalaag.dll
+C:\Users\thibe\Documents\GitHub\RESTAdresbeheer\Datalaag\bin\Debug\net5.0\Datalaag.pdb
+C:\Users\thibe\Documents\GitHub\RESTAdresbeheer\Datalaag\bin\Debug\net5.0\Domeinlaag.dll
+C:\Users\thibe\Documents\GitHub\RESTAdresbeheer\Datalaag\bin\Debug\net5.0\Domeinlaag.pdb
+C:\Users\thibe\Documents\GitHub\RESTAdresbeheer\Datalaag\obj\Debug\net5.0\Datalaag.csproj.AssemblyReference.cache
+C:\Users\thibe\Documents\GitHub\RESTAdresbeheer\Datalaag\obj\Debug\net5.0\Datalaag.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\thibe\Documents\GitHub\RESTAdresbeheer\Datalaag\obj\Debug\net5.0\Datalaag.AssemblyInfoInputs.cache
+C:\Users\thibe\Documents\GitHub\RESTAdresbeheer\Datalaag\obj\Debug\net5.0\Datalaag.AssemblyInfo.cs
+C:\Users\thibe\Documents\GitHub\RESTAdresbeheer\Datalaag\obj\Debug\net5.0\Datalaag.csproj.CoreCompileInputs.cache
+C:\Users\thibe\Documents\GitHub\RESTAdresbeheer\Datalaag\obj\Debug\net5.0\Datalaag.csproj.CopyComplete
+C:\Users\thibe\Documents\GitHub\RESTAdresbeheer\Datalaag\obj\Debug\net5.0\Datalaag.dll
+C:\Users\thibe\Documents\GitHub\RESTAdresbeheer\Datalaag\obj\Debug\net5.0\ref\Datalaag.dll
+C:\Users\thibe\Documents\GitHub\RESTAdresbeheer\Datalaag\obj\Debug\net5.0\Datalaag.pdb

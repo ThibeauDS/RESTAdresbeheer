@@ -44,6 +44,11 @@ namespace Domeinlaag.Model
             }
             NIScode = code;
         }
+
+        public override string ToString()
+        {
+            return base.ToString();
+        }
         #endregion
     }
 }

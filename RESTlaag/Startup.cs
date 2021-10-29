@@ -1,3 +1,6 @@
+using Datalaag.Repositories;
+using Domeinlaag.Interfaces;
+using Domeinlaag.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -15,6 +18,7 @@ namespace RESTlaag
 {
     public class Startup
     {
+        private readonly string _connectionString = @"Data Source=LAPTOP-Thibeau\SQLEXPRESS;Initial Catalog=AdresBeheer2A;Integrated Security=True";
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -27,6 +31,10 @@ namespace RESTlaag
         {
 
             services.AddControllers();
+            services.AddSingleton<IGemeenteRepository>(x => new GemeenteRepositoryADO(_connectionString));
+            services.AddSingleton<IStraatRepository>(x => new StraatRepositoryADO(_connectionString));
+            services.AddSingleton<GemeenteService>();
+            services.AddSingleton<StraatService>();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "RESTlaag", Version = "v1" });

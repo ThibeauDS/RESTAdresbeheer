@@ -16,9 +16,22 @@ namespace Domeinlaag.Model
         #endregion
 
         #region Constructors
-        public Straat(int ID, string straatnaam, Gemeente gemeente) { }
-        public Straat(string straatnaam, Gemeente gemeente) { }
-        public Straat(string straatnaam) { }
+        public Straat(int ID, string straatnaam, Gemeente gemeente)
+        {
+            ZetID(ID);
+            ZetStraatnaam(straatnaam);
+            ZetGemeente(gemeente);
+        }
+
+        public Straat(string straatnaam, Gemeente gemeente)
+        {
+            ZetStraatnaam(straatnaam);
+            ZetGemeente(gemeente);
+        }
+        public Straat(string straatnaam)
+        {
+            ZetStraatnaam(straatnaam);
+        }
         #endregion
 
         #region Methods
@@ -55,6 +68,11 @@ namespace Domeinlaag.Model
                 throw new StraatException("ZetGemeente - niet nieuw");
             }
             Gemeente = gemeente;
+        }
+
+        public override string ToString()
+        {
+            return base.ToString();
         }
         #endregion
     }

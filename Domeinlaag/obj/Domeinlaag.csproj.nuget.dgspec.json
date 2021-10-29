@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\thibe\\source\\repos\\RESTAdresbeheer\\Domeinlaag\\Domeinlaag.csproj": {}
+    "C:\\Users\\thibe\\Documents\\GitHub\\RESTAdresbeheer\\Domeinlaag\\Domeinlaag.csproj": {}
   },
   "projects": {
-    "C:\\Users\\thibe\\source\\repos\\RESTAdresbeheer\\Domeinlaag\\Domeinlaag.csproj": {
+    "C:\\Users\\thibe\\Documents\\GitHub\\RESTAdresbeheer\\Domeinlaag\\Domeinlaag.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\thibe\\source\\repos\\RESTAdresbeheer\\Domeinlaag\\Domeinlaag.csproj",
+        "projectUniqueName": "C:\\Users\\thibe\\Documents\\GitHub\\RESTAdresbeheer\\Domeinlaag\\Domeinlaag.csproj",
         "projectName": "Domeinlaag",
-        "projectPath": "C:\\Users\\thibe\\source\\repos\\RESTAdresbeheer\\Domeinlaag\\Domeinlaag.csproj",
+        "projectPath": "C:\\Users\\thibe\\Documents\\GitHub\\RESTAdresbeheer\\Domeinlaag\\Domeinlaag.csproj",
         "packagesPath": "C:\\Users\\thibe\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\thibe\\source\\repos\\RESTAdresbeheer\\Domeinlaag\\obj\\",
+        "outputPath": "C:\\Users\\thibe\\Documents\\GitHub\\RESTAdresbeheer\\Domeinlaag\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

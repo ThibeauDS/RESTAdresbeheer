@@ -9,6 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Datalaag\Datalaag.csproj" />
     <ProjectReference Include="..\Domeinlaag\Domeinlaag.csproj" />
   </ItemGroup>
 

@@ -3,6 +3,7 @@ using Domeinlaag.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using RESTlaag.Mappers;
+using RESTlaag.Model.Input;
 using RESTlaag.Model.Output;
 using System;
 
@@ -14,8 +15,8 @@ namespace RESTlaag.Controllers
     {
         #region Properties
         private string url = "http://localhost:5000";
-        private GemeenteService _gemeenteService;
-        private StraatService _straatService;
+        private readonly GemeenteService _gemeenteService;
+        private readonly StraatService _straatService;
         #endregion
 
         #region Constructors
@@ -39,6 +40,20 @@ namespace RESTlaag.Controllers
             catch (Exception ex)
             {
                 return NotFound(ex.Message);
+            }
+        }
+
+        [HttpPost]
+        public ActionResult<GemeenteRESTOutputDTO> PostGemeente([FromBody] GemeenteRESTInputDTO restDTO)
+        {
+            try
+            {
+                Gemeente gemeente = _gemeenteService.VoegGemeenteToe(MapToDomain.MapToGemeenteDomain(restDTO));
+                return CreatedAtAction(nameof(GetGemeente), new { id = gemeente.NIScode }, MapFromDomain.MapFromGemeenteDomain(url, gemeente, _straatService));
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
             }
         }
         #endregion

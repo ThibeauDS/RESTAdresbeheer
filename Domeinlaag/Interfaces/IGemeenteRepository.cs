@@ -10,5 +10,7 @@ namespace Domeinlaag.Interfaces
     public interface IGemeenteRepository
     {
         Gemeente GeefGemeente(int id);
+        bool HeeftGemeente(int nIScode);
+        void VoegGemeenteToe(Gemeente gemeente);
     }
 }
