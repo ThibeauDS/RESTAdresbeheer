@@ -50,6 +50,40 @@ namespace Domeinlaag.Services
                 throw new GemeenteServiceException("VoegGemeenteToe", ex);
             }
         }
+
+        public void VerwijderGemeente(int id)
+        {
+            try
+            {
+                if (!_repo.HeeftGemeente(id))
+                {
+                    throw new GemeenteServiceException("VerwijderGemeente - Gemeente bestaat niet.");
+                }
+                _repo.VerwijderGemeente(id);
+            }
+            catch (Exception ex)
+            {
+                throw new GemeenteServiceException("VerwijderGemeente", ex);
+            }
+
+        }
+
+        public void UpdateGemeente(int id, Gemeente gemeente)
+        {
+            try
+            {
+                if (!_repo.HeeftGemeente(id))
+                {
+                    VoegGemeenteToe(gemeente);
+                }
+                Gemeente gemeenteDB = GeefGemeente(id);
+                _repo.UpdateGemeente(gemeente);
+            }
+            catch (Exception ex)
+            {
+                throw new GemeenteServiceException("UpdateGemeente", ex);
+            }
+        }
         #endregion
     }
 }

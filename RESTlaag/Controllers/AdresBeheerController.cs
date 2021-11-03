@@ -56,6 +56,39 @@ namespace RESTlaag.Controllers
                 return BadRequest(ex.Message);
             }
         }
+
+        [HttpDelete("{id}")]
+        public IActionResult DeleteGemeente(int id)
+        {
+            try
+            {
+                _gemeenteService.VerwijderGemeente(id);
+                return NoContent();
+            }
+            catch (Exception ex)
+            {
+                return NotFound(ex.Message);
+            }
+        }
+
+        [HttpPut("{id}")]
+        public IActionResult PutGemeente(int id, [FromBody] GemeenteRESTInputDTO restDTO)
+        {
+            try
+            {
+                Gemeente gemeente = MapToDomain.MapToGemeenteDomain(restDTO);
+                if (gemeente == null || gemeente.NIScode != id)
+                {
+                    return BadRequest();
+                }
+                _gemeenteService.UpdateGemeente(id, gemeente);
+                return NoContent();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
         #endregion
 
         #region Straat

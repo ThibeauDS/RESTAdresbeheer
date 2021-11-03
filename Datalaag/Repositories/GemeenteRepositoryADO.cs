@@ -111,6 +111,55 @@ namespace Datalaag.Repositories
                 connection.Close();
             }
         }
+
+        public void VerwijderGemeente(int id)
+        {
+            string sql = "DELETE FROM [dbo].[gemeente] WHERE NIScode = @NIScode";
+            SqlConnection connection = getConnection();
+            using SqlCommand command = new(sql, connection);
+            try
+            {
+                connection.Open();
+                command.Parameters.AddWithValue("@NIScode", id);
+                command.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                GemeenteRepositoryADOException dbex = new("VerwijderGemeente niet gelukt", ex);
+                dbex.Data.Add("Gemeente", id);
+                throw dbex;
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+
+        public void UpdateGemeente(Gemeente gemeente)
+        {
+            string sql = "UPDATE [dbo].[gemeente] SET gemeentenaam = @gemeentenaam WHERE NIScode = @NIScode";
+            SqlConnection connection = getConnection();
+            using SqlCommand command = new(sql, connection);
+            try
+            {
+                connection.Open();
+                command.Parameters.Add(new SqlParameter("@NIScode", SqlDbType.Int));
+                command.Parameters.Add(new SqlParameter("@gemeentenaam", SqlDbType.NVarChar));
+                command.Parameters["@NIScode"].Value = gemeente.NIScode;
+                command.Parameters["@gemeentenaam"].Value = gemeente.Gemeentenaam;
+                command.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                GemeenteRepositoryADOException dbex = new("UpdateGemeente niet gelukt", ex);
+                dbex.Data.Add("Gemeente", gemeente);
+                throw dbex;
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
         #endregion
     }
 }

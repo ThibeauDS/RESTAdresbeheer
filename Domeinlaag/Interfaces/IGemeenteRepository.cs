@@ -12,5 +12,7 @@ namespace Domeinlaag.Interfaces
         Gemeente GeefGemeente(int id);
         bool HeeftGemeente(int nIScode);
         void VoegGemeenteToe(Gemeente gemeente);
+        void VerwijderGemeente(int id);
+        void UpdateGemeente(Gemeente gemeente);
     }
 }

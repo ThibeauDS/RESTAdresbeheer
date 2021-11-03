@@ -18,7 +18,7 @@ namespace RESTlaag
 {
     public class Startup
     {
-        private readonly string _connectionString = @"Data Source=LAPTOP-Thibeau\SQLEXPRESS;Initial Catalog=AdresBeheer2A;Integrated Security=True";
+        private readonly string _connectionString = @"Data Source=.\SQLEXPRESS;Initial Catalog=AdresBeheer2A;Integrated Security=True";
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
