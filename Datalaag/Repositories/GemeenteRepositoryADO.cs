@@ -160,34 +160,6 @@ namespace Datalaag.Repositories
                 connection.Close();
             }
         }
-
-        public bool HeeftStraten(int id)
-        {
-            string sql = "SELECT count(*) FROM [dbo].[straat] WHERE NIScode = @NIScode";
-            SqlConnection connection = getConnection();
-            using SqlCommand sqlcommand = new(sql, connection);
-            try
-            {
-                connection.Open();
-                sqlcommand.Parameters.AddWithValue("@NIScode", id);
-                int n = (int)sqlcommand.ExecuteScalar();
-                if (n > 0)
-                {
-                    return true;
-                }
-                return false;
-            }
-            catch (Exception ex)
-            {
-                GemeenteRepositoryADOException dbex = new("HeeftStraten niet gelukt:", ex);
-                dbex.Data.Add("NIScode", id);
-                throw dbex;
-            }
-            finally
-            {
-                connection.Close();
-            }
-        }
         #endregion
     }
 }

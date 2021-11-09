@@ -10,6 +10,5 @@ namespace Domeinlaag.Interfaces
     public interface IStraatRepository
     {
         List<Straat> GeefStratenGemeente(int gemeenteId);
-        Straat GeefStraat(int straatId);
     }
 }

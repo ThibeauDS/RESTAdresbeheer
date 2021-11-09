@@ -17,7 +17,6 @@ namespace RESTlaag.Controllers
         private string url = "http://localhost:5000";
         private readonly GemeenteService _gemeenteService;
         private readonly StraatService _straatService;
-        private readonly AdresService _adresService;
         #endregion
 
         #region Constructors
@@ -93,24 +92,7 @@ namespace RESTlaag.Controllers
         #endregion
 
         #region Straat
-        [HttpGet]
-        [Route("{gemeenteId}/straat/{straatId}")]
-        public ActionResult<StraatRESTOutputDTO> GetStraat(int gemeenteId, int straatId)
-        {
-            try
-            {
-                Straat straat = _straatService.GeefStraat(straatId);
-                if (straat.Gemeente.NIScode != gemeenteId)
-                {
-                    return BadRequest("Gemeentecode klopt niet met url");
-                }
-                return Ok(MapFromDomain.MapFromStraatDomain(url, straat, _adresService));
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
-        }
+
         #endregion
 
         #region Adres
