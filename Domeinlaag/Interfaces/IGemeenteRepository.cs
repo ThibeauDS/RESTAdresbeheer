@@ -14,5 +14,6 @@ namespace Domeinlaag.Interfaces
         void VoegGemeenteToe(Gemeente gemeente);
         void VerwijderGemeente(int id);
         void UpdateGemeente(Gemeente gemeente);
+        bool HeeftStraten(int id);
     }
 }

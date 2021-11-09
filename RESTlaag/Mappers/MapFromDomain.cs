@@ -25,6 +25,22 @@ namespace RESTlaag.Mappers
                 throw new MapException("MapFromGemeenteDomain", ex);
             }
         }
+
+        public static StraatRESTOutputDTO MapFromStraatDomain(string url, Straat straat, AdresService adresService)
+        {
+            try
+            {
+                string gemeenteURL = $"{url}/gemeente/{straat.Gemeente.NIScode}";
+                string straatURL = gemeenteURL + $"{url}/straat/{straat.ID}";
+                List<string> adressen = adresService.GeefAdressenStraat(straat.ID).Select(x => straatURL + $"/adres/{x.ID}").ToList();
+                StraatRESTOutputDTO dto = new(straatURL, straat.Straatnaam, gemeenteURL, adressen.Count, adressen);
+                return dto;
+            }
+            catch (Exception ex)
+            {
+                throw new MapException("MapFromStraatDomain", ex);
+            }
+        }
         #endregion
     }
 }

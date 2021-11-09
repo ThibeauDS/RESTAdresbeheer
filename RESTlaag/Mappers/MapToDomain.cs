@@ -20,6 +20,19 @@ namespace RESTlaag.Mappers
                 throw new MapException("MapToGemeenteDomain: ", ex);
             }
         }
+
+        //public static Straat MapToStraatDomain(StraatRESTInputDTO dto)
+        //{
+        //    try
+        //    {
+        //        Straat straat = new();
+        //        return straat;
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        throw new MapException("MapToStraatDomain: ", ex);
+        //    }
+        //}
         #endregion
     }
 }

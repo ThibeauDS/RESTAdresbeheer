@@ -33,8 +33,10 @@ namespace RESTlaag
             services.AddControllers();
             services.AddSingleton<IGemeenteRepository>(x => new GemeenteRepositoryADO(_connectionString));
             services.AddSingleton<IStraatRepository>(x => new StraatRepositoryADO(_connectionString));
+            services.AddSingleton<IAdresRepository>(x => new AdresRepositoryADO(_connectionString));
             services.AddSingleton<GemeenteService>();
             services.AddSingleton<StraatService>();
+            services.AddSingleton<AdresService>();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "RESTlaag", Version = "v1" });
