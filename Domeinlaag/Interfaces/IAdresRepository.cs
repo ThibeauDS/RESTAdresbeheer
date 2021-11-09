@@ -7,9 +7,8 @@ using System.Threading.Tasks;
 
 namespace Domeinlaag.Interfaces
 {
-    public interface IStraatRepository
+    public interface IAdresRepository
     {
-        List<Straat> GeefStratenGemeente(int gemeenteId);
-        Straat GeefStraat(int straatId);
+        IEnumerable<Adres> GeefAdressenStraat(int id);
     }
 }

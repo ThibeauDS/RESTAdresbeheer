@@ -59,6 +59,10 @@ namespace Domeinlaag.Services
                 {
                     throw new GemeenteServiceException("VerwijderGemeente - Gemeente bestaat niet.");
                 }
+                if (!_repo.HeeftStraten(id))
+                {
+                    throw new GemeenteServiceException("VerwijderGemeente - Straten niet.");
+                }
                 _repo.VerwijderGemeente(id);
             }
             catch (Exception ex)
@@ -84,6 +88,18 @@ namespace Domeinlaag.Services
                 throw new GemeenteServiceException("UpdateGemeente", ex);
             }
         }
+
+        //public bool BestaatGemeente(int id)
+        //{
+        //    try
+        //    {
+        //        return _repo.HeeftGemeente(id);
+        //    }
+        //    catch(Exception ex)
+        //    {
+        //        throw new Exception(ex);
+        //    }
+        //}
         #endregion
     }
 }

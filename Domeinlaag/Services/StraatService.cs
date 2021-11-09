@@ -34,6 +34,18 @@ namespace Domeinlaag.Services
                 throw new StraatServiceException("GeefStratenGemeente", ex);
             }
         }
+
+        public Straat GeefStraat(int straatId)
+        {
+            try
+            {
+                return _repo.GeefStraat(straatId);
+            }
+            catch (Exception ex)
+            {
+                throw new StraatServiceException("GeefStraat", ex);
+            }
+        }
         #endregion
     }
 }
